@@ -1,0 +1,19 @@
+version: "3.1"
+
+stories:
+
+- story: restaurant form
+  steps:
+  - intent: request_restaurant
+  - action: restaurant_form
+  - active_loop: restaurant_form
+  - action: utter_ask_restaurant_form_cuisine
+  - slot_was_set:
+    - requested_slot: cuisine
+  - intent: inform_data
+  - action: restaurant_form
+  - action: utter_ask_restaurant_form_num_people
+  - slot_was_set:
+    - requested_slot: num_people
+  - intent: inform_data
+  - action: restaurant_form

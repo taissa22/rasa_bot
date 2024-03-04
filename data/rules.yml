@@ -1,0 +1,21 @@
+version: "3.1"
+
+rules:
+
+- rule: utter 
+
+- rule: utter ask cuisine
+  condition:
+  - active_loop: restaurant_form
+  steps:
+  - slot_was_set:
+    - requested_slot: cuisine
+  - action: utter_ask_cuisine
+
+- rule: utter ask number of people
+  condition:
+  - active_loop: restaurant_form
+  steps:
+  - slot_was_set:
+    - requested_slot: num_people
+  - action: utter_ask_num_people
