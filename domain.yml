@@ -8,7 +8,9 @@ intents:
   - mood_great
   - mood_unhappy
   - bot_challenge
-
+  - request_restaurant
+  - inform_data
+  
 responses:
   utter_greet:
   - text: Hey! How are you?
@@ -37,6 +39,26 @@ responses:
    *people: {num_people}'
   utter_ask_continue:
   - text: "Do you want to continue? (yes or no)"
+
+entities:
+- cuisine
+- number
+slots:
+  cuisine:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: cuisine
+  num_people:
+    type: any
+    mappings:
+    - type: from_entity
+      entity: number
+forms:
+  restaurant_form:
+    required_slots:
+        - cuisine
+        - num_people
 
 session_config:
   session_expiration_time: 60
