@@ -103,6 +103,7 @@ nlu:
     - I want [brazilian]{cuisine} cuisine
     - I want a [american]{"entity": "cuisine"} restaurant for [11]{num_people}
     - For [two]{num_people} people, please
+
 - intent: bot_challenge
   examples: |
     - are you a bot?
