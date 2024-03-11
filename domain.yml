@@ -31,7 +31,7 @@ responses:
   utter_submit:
   - text: Do you want to submit your request?
   utter_slots_values:
-  - text: 'Here are the slots values:\n   *cuisine: {cuisine}\n   *people: {num_people}'
+  - text: 'Here are the slots values: *cuisine: {cuisine} *people: {num_people}'
   utter_ask_continue:
   - text: "Do you want to continue? (yes or no)"
 
