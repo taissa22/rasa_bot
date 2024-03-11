@@ -99,10 +99,10 @@ nlu:
 
 - intent: inform_data
   examples: |
-    - I want a [italian]{"entity": "cuisine"} restaurant for [ten]{"entity": "num_people"}
-    - I want [brazilian]{cuisine} cuisine
-    - I want a [american]{"entity": "cuisine"} restaurant for [11]{num_people}
-    - For [two]{num_people} people, please
+    - I want a [italian](cuisine) restaurant for [ten](num_people)
+    - I want [brazilian](cuisine) cuisine
+    - I want a [american](cuisine) restaurant for [11](num_people)
+    - For [two](num_people) people, please
 
 - intent: bot_challenge
   examples: |

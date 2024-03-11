@@ -4,8 +4,23 @@ rules:
 
 - rule: Challenge
   steps:
-  - intent: challenge
-  - action: utter_challenge
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+- rule: greet
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+- rule: mood_great
+  steps:
+  - intent: mood_great
+  - action: utter_happy
+
+- rule: mood_unhappy
+  steps:
+  - intent: mood_unhappy
+  - action: utter_cheer_up
 
 - rule: goodbye
   steps:

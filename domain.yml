@@ -15,10 +15,7 @@ responses:
   utter_greet:
   - text: Hey! How are you?
   utter_cheer_up:
-  - text: 'Here is something to cheer you up:'
-    image: https://i.imgur.com/nGF1K8f.jpg
-  utter_did_that_help:
-  - text: Did that help you?
+  - text: 'Oh, I am sorry, hope you feel better soon'
   utter_happy:
   - text: Great, carry on!
   utter_goodbye:
@@ -27,22 +24,21 @@ responses:
   - text: I am a bot, powered by Taissa.
   utter_default:
   - text: Could you rephrase?
-  utter_ask_resturant_form_cuisine:
+  utter_ask_restaurant_form_cuisine:
   - text: Which cuisine would you like?
-  utter_ask_resturant_form_num_people:
+  utter_ask_restaurant_form_num_people:
   - text: How many people?
   utter_submit:
   - text: Do you want to submit your request?
   utter_slots_values:
-  - text: 'Here are the slots values:
-   *cuisine: {cuisine}
-   *people: {num_people}'
+  - text: 'Here are the slots values:\n   *cuisine: {cuisine}\n   *people: {num_people}'
   utter_ask_continue:
   - text: "Do you want to continue? (yes or no)"
 
 entities:
 - cuisine
-- number
+- num_people
+
 slots:
   cuisine:
     type: text
@@ -53,7 +49,7 @@ slots:
     type: any
     mappings:
     - type: from_entity
-      entity: number
+      entity: num_people
 forms:
   restaurant_form:
     required_slots:
