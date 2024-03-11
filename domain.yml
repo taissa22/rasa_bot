@@ -34,6 +34,9 @@ responses:
   - text: 'Here are the slots values: *cuisine: {cuisine} *people: {num_people}'
   utter_ask_continue:
   - text: "Do you want to continue? (yes or no)"
+  utter_submited:
+  - text: Thank you for submitting your request!
+
 
 entities:
 - cuisine

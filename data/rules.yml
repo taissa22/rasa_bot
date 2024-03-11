@@ -38,11 +38,12 @@ rules:
   - active_loop: restaurant_form
   steps:
   - action: restaurant_form
+  - active_loop: null
   - slot_was_set:
     - requested_slot: null
   - action: utter_submit
   - action: utter_slots_values
   - intent: affirm
-  - active_loop: null
+  - action: utter_submited
 
 
